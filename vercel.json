@@ -6,11 +6,11 @@
   
   "env": {
     "NEXT_PUBLIC_SITE_URL": {
-      "description": "Production site URL",
+      "description": "neural-frame-ylumni.vercel.app",
       "required": false
     },
     "NEXT_PUBLIC_COMPANY_EMAIL": {
-      "description": "Company contact email",
+      "description": "hello@ylumni.com",
       "required": false
     },
     "SENDGRID_API_KEY": {
