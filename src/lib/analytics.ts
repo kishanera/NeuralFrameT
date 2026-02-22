@@ -3,17 +3,17 @@
  * Lightweight analytics for tracking page views and events
  */
 
-interface PageViewEvent {
-  path: string
-  referrer?: string
-  timestamp: number
-}
+// interface PageViewEvent {
+//   path: string
+//   referrer?: string
+//   timestamp: number
+// }
 
-interface CustomEvent {
-  name: string
-  properties?: Record<string, string | number | boolean>
-  timestamp: number
-}
+// interface CustomEvent {
+//   name: string
+//   properties?: Record<string, string | number | boolean>
+//   timestamp: number
+// }
 
 /**
  * Track page view
@@ -32,11 +32,11 @@ export function trackPageView(path: string) {
 
   // Local analytics (optional - send to your backend)
   if (process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true') {
-    const event: PageViewEvent = {
-      path,
-      referrer: document.referrer,
-      timestamp: Date.now(),
-    }
+    // const event: PageViewEvent = {
+    //   path,
+    //   referrer: document.referrer,
+    //   timestamp: Date.now(),
+    // }
 
     // Send to your analytics endpoint if available
     // fetch('/api/analytics/pageview', {
@@ -63,11 +63,11 @@ export function trackEvent(
 
   // Local analytics (optional)
   if (process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true') {
-    const event: CustomEvent = {
-      name,
-      properties,
-      timestamp: Date.now(),
-    }
+    // const event: CustomEvent = {
+    //   name,
+    //   properties,
+    //   timestamp: Date.now(),
+    // }
 
     // Send to your analytics endpoint if available
     // fetch('/api/analytics/event', {

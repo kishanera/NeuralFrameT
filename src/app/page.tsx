@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import Link from 'next/link'
+// import Link from 'next/link'
 import { Hero } from '@/components/Hero'
 import { Portfolio } from '@/components/Portfolio'
 

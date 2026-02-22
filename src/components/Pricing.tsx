@@ -2,24 +2,22 @@ import { PricingCard } from '@/components/PricingCard'
 
 const pricingPlans = [
   {
-    name: 'Starter',
-    price: '₹2,999',
-    description: 'Perfect for trying out our service',
-    features: ['3 short videos', 'Basic editing', 'MP4 export', '7-day turnaround'],
+    name: 'Storytelling',
+    price: '₹4,999',
+    description: 'Perfect for upto 45-seconds story videos',
+    features: ['Upto 45 seconds', 'Basic editing', 'MP4 export', '4-day turnaround'],
     ctaText: 'Get Started',
     ctaHref: '#contact',
     featured: false,
   },
   {
-    name: 'Growth',
-    price: '₹11,999',
-    description: 'Most popular for scaling your content',
+    name: 'Product Videos',
+    price: '₹14,999',
+    description: 'High-quality videos for your product launches and promotions',
     features: [
-      '10 short videos',
-      '2 ad creatives',
       'Revisions included',
       'Priority support',
-      '3-day turnaround',
+      '5-day turnaround',
     ],
     ctaText: 'Book Now',
     ctaHref: '#contact',
@@ -30,11 +28,12 @@ const pricingPlans = [
     price: 'Contact Us',
     description: 'For enterprise and custom needs',
     features: [
-      'Unlimited deliverables',
-      'Dedicated account manager',
+      'Realstate walkthroughs',
+      'Industrial videos',
       'Custom workflows',
       'Integrated strategy sessions',
       '24-hour support',
+      'Bulk Orders'
     ],
     ctaText: 'Schedule Call',
     ctaHref: 'mailto:hello@neuralframestudio.com?subject=Custom%20Pricing%20Inquiry',

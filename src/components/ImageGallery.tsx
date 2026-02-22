@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 
 interface ImageItem {
-  id: string
+  id: number
   title: string
   category: string
   src: string
@@ -51,7 +51,7 @@ const categories = ['All', 'Fashion', 'Jewelry', 'Beverage', 'Accessories', 'Pro
 export default function ImageGallery() {
   const [selectedImage, setSelectedImage] = useState<ImageItem | null>(null)
   const [filter, setFilter] = useState('All')
-  const [hoveredId, setHoveredId] = useState<string | null>(null)
+  //const [hoveredId, setHoveredId] = useState<number | null>(null)
 
   const filteredImages = filter === 'All' ? images : images.filter(img => img.category === filter)
 
@@ -84,8 +84,8 @@ export default function ImageGallery() {
               idx % 5 === 0 ? 'md:col-span-2 md:row-span-2' : ''
             }`}
             onClick={() => setSelectedImage(image)}
-            onMouseEnter={() => setHoveredId(image.id)}
-            onMouseLeave={() => setHoveredId(null)}
+            //onMouseEnter={() => setHoveredId(image.id)}
+            //onMouseLeave={() => setHoveredId(null)}
           >
             <div className="relative w-full h-64 md:h-80 overflow-hidden bg-gray-800">
               <Image

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useEffect } from 'react'
+//import { useEffect } from 'react'
 
 interface VideoItem {
   id: string
@@ -35,8 +35,8 @@ const categories = ['All', 'Real Estate', 'UGC', 'Food & Beverage', 'Creative', 
 export default function VideoGallery() {
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null)
   const [filter, setFilter] = useState('All')
-  const [hoveredId, setHoveredId] = useState<string | null>(null)
-  const [isPlaying, setIsPlaying] = useState(false)
+ // const [hoveredId, setHoveredId] = useState<string | null>(null)
+  // const [isPlaying, setIsPlaying] = useState(false)
 
   const filteredVideos = filter === 'All' ? videos : videos.filter(video => video.category === filter)
 
@@ -66,8 +66,8 @@ export default function VideoGallery() {
             key={video.id}
             className="group cursor-pointer"
             onClick={() => setSelectedVideo(video)}
-            onMouseEnter={() => setHoveredId(video.id)}
-            onMouseLeave={() => setHoveredId(null)}
+           // onMouseEnter={() => setHoveredId(video.id)}
+           // onMouseLeave={() => setHoveredId(null)}
           >
             {/* Video Card Container */}
             <div className="relative overflow-hidden rounded-xl bg-gray-900 border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 aspect-video group">
@@ -148,7 +148,7 @@ export default function VideoGallery() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm p-4"
           onClick={() => {
             setSelectedVideo(null)
-            setIsPlaying(false)
+           // setIsPlaying(false)
           }}
         >
           <div
@@ -169,7 +169,7 @@ export default function VideoGallery() {
               <button
                 onClick={() => {
                   setSelectedVideo(null)
-                  setIsPlaying(false)
+                 // setIsPlaying(false)
                 }}
                 className="absolute top-4 right-4 bg-black/50 hover:bg-black/75 p-2 rounded-lg transition-colors z-10"
               >
